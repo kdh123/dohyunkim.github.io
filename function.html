@@ -8,13 +8,53 @@
 <body>
     <script>
         function get_age(name){
-            return name;
+            this.name = name;
         }
 
+       var Person = function(name){
+           return name;
+       }
        
+       function cal(a, b){
+           return a+b;
+       }
 
-        document.write(get_age("Tom"))
+        document.write(Person("Tom") + "</br>")
+        document.write(cal(2,3) + "</br>");
 
+        var num;
+
+       function t(){
+           if(window === this)
+                num = 1;
+            else
+                num = 2;
+       }
+
+       var a = t();
+
+       a = new t();
+       document.write(num + "aaaa</br>");
+       
+        var o = {}
+        var p = {}
+        function func(){
+            switch(this){
+                case o:
+                    document.write('o<br />');
+                    break;
+                case p:
+                    document.write('p<br />');
+                    break;
+                case window:
+                    document.write('window<br />');
+                    break;          
+            }
+        }
+        func();
+        func.apply(o);
+        func.apply(p);
+        
 
     </script>
 </body>

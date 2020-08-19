@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var grade = {};
+        grade["Tom"] = "A";
+        grade["Jay"] = "B";
+        grade["Gloria"] = "C";
+
+        function cal(a, b){
+            return a + b;
+        }
+
+        document.write(grade['Tom'] + "</br>");
+
+        var grade2 = {'Tom':'A', 'Jay':'B', 'Gloria':'C',}
+        document.write(grade2.Jay + "</br>");
+        
+
+        var person = {"name" : "Tom",
+                        "func":function(name){
+                            return name;
+                        }}
+        
+        
+        document.write(person.func("Gloria") + "</br>")
+
+        function set_name(name){
+            this.name = name;
+        }
+
+        var p = new set_name("가나다");
+        document.write(p.name);
+
+    </script>
+</body>
+</html>
